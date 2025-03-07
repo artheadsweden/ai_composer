@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#121212" />
+  
+  <!-- Primary Meta Tags -->
+  <title>AI Ensemble Composer</title>
+  <meta name="title" content="AI Ensemble Composer">
+  <meta name="description" content="Create multi-track music with AI that generates individual instrument tracks with precise control">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-ensemble-composer.example.com/">
+  <meta property="og:title" content="AI Ensemble Composer">
+  <meta property="og:description" content="Create multi-track music with AI that generates individual instrument tracks with precise control">
+  <meta property="og:image" content="%PUBLIC_URL%/social-preview.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ai-ensemble-composer.example.com/">
+  <meta property="twitter:title" content="AI Ensemble Composer">
+  <meta property="twitter:description" content="Create multi-track music with AI that generates individual instrument tracks with precise control">
+  <meta property="twitter:image" content="%PUBLIC_URL%/social-preview.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!-- Preconnect to API server to improve performance -->
+  <link rel="preconnect" href="https://api.example.com">
+  
+  <!-- Font preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  
+  <!-- App-specific metadata -->
+  <meta name="application-name" content="AI Ensemble Composer">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AI Ensemble Composer">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  
+  <!-- SEO -->
+  <meta name="keywords" content="AI music, music generation, music composition, ai composer, multitrack, audio production">
+  <meta name="author" content="AI Ensemble Composer Team">
+  <link rel="canonical" href="https://ai-ensemble-composer.example.com/">
+</head>
+<body>
+  <!-- Warning for users with JavaScript disabled -->
+  <noscript>
+    <div style="padding: 2rem; text-align: center; font-family: sans-serif; background-color: #121212; color: white; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <h1 style="margin-bottom: 1rem;">JavaScript Required</h1>
+      <p>AI Ensemble Composer requires JavaScript to function. Please enable JavaScript in your browser settings and reload the page.</p>
+    </div>
+  </noscript>
+  
+  <!-- Root DOM node for React -->
+  <div id="root"></div>
+  
+  <!-- Modal container for portals -->
+  <div id="modal-root"></div>
+  
+  <!-- Toast notification container -->
+  <div id="toast-root"></div>
+  
+  <!-- Loading indicator (shown until app loads) -->
+  <div id="initial-loader" style="position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #121212; color: white; z-index: 9999; font-family: sans-serif;">
+    <div style="width: 50px; height: 50px; border: 3px solid #3b82f6; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite;"></div>
+    <p style="margin-top: 1rem;">Loading AI Ensemble Composer...</p>
+    <style>
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    <script>
+      // Hide loader when app is loaded
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var loader = document.getElementById('initial-loader');
+          if (loader) {
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.3s ease-out';
+            setTimeout(function() {
+              if (loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+              }
+            }, 300);
+          }
+        }, 200);
+      });
+    </script>
+  </div>
+  
+  <!-- Application scripts added by build process -->
+</body>
+</html>
